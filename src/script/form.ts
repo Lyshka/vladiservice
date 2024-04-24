@@ -45,10 +45,18 @@ const handleForm = () => {
       try {
         const {
           data: { error, success },
-        } = await axios.post<Response>(`${window.location.origin}/form.php`, {
-          tel: telValue,
-          message: messageValue,
-        });
+        } = await axios.post<Response>(
+          `${window.location.origin}/form.php`,
+          {
+            tel: telValue,
+            message: messageValue,
+          },
+          {
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          }
+        );
 
         if (success) {
           (event.target as HTMLFormElement).reset();
