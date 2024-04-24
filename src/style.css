@@ -28,7 +28,11 @@
 
   button,
   a {
-    @apply transition-all duration-300 hover:opacity-75;
+    @apply transition-all duration-300;
+  }
+
+  a {
+    @apply hover:opacity-75;
   }
 
   input,
@@ -39,7 +43,7 @@
 
 @layer components {
   .main-button {
-    @apply xl:w-[290px] w-full text-lg leading-[21.6px] text-white bg-main h-[50px] text-center flex justify-center items-center;
+    @apply xl:w-[290px] w-full text-lg leading-[21.6px] text-white bg-main h-[50px] text-center flex justify-center items-center hover:bg-[#D21809];
   }
 
   .footer-menu a {
@@ -92,5 +96,45 @@
 
   .stage-card-shadow {
     box-shadow: 0px 1px 5px 0px #d6d6d6;
+  }
+
+  .product-card {
+    @apply flex xl:gap-[30px] gap-2.5 xl:even:flex-row-reverse xl:flex-row flex-col xl:justify-between;
+  }
+
+  .product-card .image-product {
+    @apply xl:h-[378px] h-[168px] xl:w-[672px] w-full;
+  }
+
+  .product-card .container-product {
+    @apply xl:space-y-6 space-y-2.5;
+  }
+
+  .product-card .container-product .container-info {
+    @apply xl:space-y-2.5 space-y-2;
+  }
+
+  .product-card .container-product .container-info .title {
+    @apply xl:leading-[52px] leading-[39px] xl:text-[40px] text-[30px] font-semibold uppercase;
+  }
+
+  .product-card .container-product .container-info .desc {
+    @apply xl:leading-[28.8px] leading-[21.6px] xl:text-2xl text-lg font-bold;
+  }
+
+  .product-card .container-product .container-info .desc br {
+    @apply xl:block hidden;
+  }
+
+  .product-card .product-text {
+    @apply xl:leading-6 leading-[19.2px] xl:text-xl text-base;
+  }
+
+  .text-list-product {
+    @apply list-inside list-disc ml-2 mt-1;
+  }
+
+  .modal.open {
+    @apply translate-y-0 opacity-100;
   }
 }
