@@ -103,7 +103,7 @@
   }
 
   .product-card .image-product {
-    @apply xl:h-[378px] h-[168px] xl:w-[672px] w-full;
+    @apply xl:h-[378px] xl:w-[672px] w-full;
   }
 
   .product-card .container-product {
